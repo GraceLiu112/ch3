@@ -8,13 +8,9 @@ public class ConvertTime {
 		int minutes;
 		int seconds;
 		hours = total / 3600;
-		minutes = (total - hours * 3600) / 60;
-		seconds = total - hours * 3600 - minutes * 60;
-		System.out.println(total + " seconds = " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds");
-		
-		
-	
-
+		minutes = (total % 3600) / 60;
+		seconds = total % 60;
+		System.out.printf("%d seconds = %d hours, %d minutes, and %d seconds", total, hours, minutes, seconds);
 	
 	}
 }
